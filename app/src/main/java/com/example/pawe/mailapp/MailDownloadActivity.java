@@ -3,6 +3,10 @@ package com.example.pawe.mailapp;
 
 import android.app.Notification;
 import android.content.pm.PackageInstaller;
+import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import java.util.Properties;
@@ -14,13 +18,20 @@ import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Store;
 
+import butterknife.ButterKnife;
+
 /**
  * Created by Paweł on 2018-03-03.
  */
 
-public class MailDownload {
+public class MailDownloadActivity extends AppCompatActivity {
 
-    public static void main(String args[]) throws Exception {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    public static void mailDownload(String args[]) throws Exception {
 
         // mail server connection parameters
         String host = "pop.gmail.com";
